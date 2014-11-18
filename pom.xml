@@ -55,9 +55,10 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/webservices/commons/tags/XmlSchema/XmlSchema-1.4.7</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/webservices/commons/tags/XmlSchema/XmlSchema-1.4.7</developerConnection>
-    <url>http://svn.apache.org/viewvc/webservices/commons/tags/XmlSchema/XmlSchema-1.4.7</url>
+    <url>https://github.com/wso2/wso2-xmlschema.git</url>
+    <developerConnection>scm:git:https://github.com/wso2/wso2-xmlschema.git</developerConnection>
+    <connection>scm:git:https://github.com/wso2/wso2-xmlschema.git</connection>
+    <tag>HEAD</tag>
   </scm>
   <organization>
     <name>The Apache Software Foundation</name>
@@ -149,6 +150,18 @@
               </instructions>
           </configuration>
       </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <preparationGoals>clean install</preparationGoals>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+      </plugin>
     </plugins>
     <defaultGoal>install</defaultGoal>
     <pluginManagement>
@@ -165,18 +178,6 @@
             <archive>
               <manifestFile>target/classes/META-INF/MANIFEST.MF</manifestFile>
             </archive>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.0</version>
-          <configuration>
-            <tagBase>https://svn.apache.org/repos/asf/webservices/commons/tags/XmlSchema</tagBase>
-            <useReleaseProfiles>true</useReleaseProfiles>
-            <releaseProfiles>xmlschema_release,release,fastinstall</releaseProfiles>
-            <remoteTagging>true</remoteTagging>
-            <preparationGoals>clean install</preparationGoals>
-            <goals>deploy</goals>
           </configuration>
         </plugin>
         <plugin>
@@ -497,15 +498,10 @@
   </distributionManagement>-->
     <distributionManagement>
         <repository>
-            <id>wso2-maven2-repository</id>
-            <name>WSO2 Maven2 Repository</name>
-            <url>scp://dist.wso2.org/home/httpd/dist.wso2.org/maven2/</url>
+            <id>nexus-releases</id>
+            <name>WSO2 Release Distribution Repository</name>
+            <url>http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/</url>
         </repository>
-        <snapshotRepository>
-            <id>wso2-maven2-snapshot-repository</id>
-            <name>WSO2 Maven2 Snapshot Repository</name>
-            <url>scp://dist.wso2.org/home/httpd/dist.wso2.org/snapshots/maven2/</url>
-        </snapshotRepository>
     </distributionManagement>
     <pluginRepositories>
         <pluginRepository>
@@ -515,4 +511,8 @@
             <layout>default</layout>
         </pluginRepository>
     </pluginRepositories>
+
+    <properties>
+        <project.scm.id>scm-server</project.scm.id>
+    </properties>
 </project>
