@@ -23,7 +23,7 @@
   <artifactId>XmlSchema</artifactId>
   <packaging>bundle</packaging>
   <name>XmlSchema</name>
-  <version>1.4.7-wso2v3-SNAPSHOT</version>
+  <version>1.4.7.wso2v3-SNAPSHOT</version>
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
@@ -145,8 +145,8 @@
           <extensions>true</extensions>
           <configuration>
               <instructions>
-                  <Import-Package>org.apache.ws.commons.schema*;version=${pom.version},*</Import-Package>
-                  <Export-Package>org.apache.ws.commons.schema*;version="${pom.version}"</Export-Package>
+                  <Import-Package>!org.apache.ws.commons.schema.*;version=${pom.version},*</Import-Package>
+                  <Export-Package>org.apache.ws.commons.schema.*;version="${pom.version}"</Export-Package>
               </instructions>
           </configuration>
       </plugin>
