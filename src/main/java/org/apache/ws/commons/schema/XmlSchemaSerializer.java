@@ -2121,6 +2121,13 @@ public class XmlSchemaSerializer {
                     restrictionObj.annotation, schema);
             restriction.appendChild(annotation);
         }
+        XmlSchemaObjectCollection facets = restrictionObj.facets;
+        int facetLength = facets.getCount();
+        for (int i = 0; i < facetLength; i++) {
+            Element facet = serializeFacet(doc,
+                    (XmlSchemaFacet) facets.getItem(i), schema);
+            restriction.appendChild(facet);
+        }
         int attrCollLength = restrictionObj.attributes.getCount();
         for (int i = 0; i < attrCollLength; i++) {
             XmlSchemaObject obj = restrictionObj.attributes.getItem(i);
@@ -2145,13 +2152,7 @@ public class XmlSchemaSerializer {
                     restrictionObj.anyAttribute, schema);
             restriction.appendChild(anyAttribute);
         }
-        XmlSchemaObjectCollection facets = restrictionObj.facets;
-        int facetLength = facets.getCount();
-        for (int i = 0; i < facetLength; i++) {
-            Element facet = serializeFacet(doc,
-                    (XmlSchemaFacet) facets.getItem(i), schema);
-            restriction.appendChild(facet);
-        }
+
 
             //process extension
         processExtensibilityComponents(restrictionObj,restriction);

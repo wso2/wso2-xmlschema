@@ -803,7 +803,16 @@ public class SchemaBuilder {
 			if (el.getLocalName().equals("attribute")) {
 				XmlSchemaAttribute attr = handleAttribute(schema, el, schemaEl);
 				restriction.attributes.add(attr);
-			} else if (el.getLocalName().equals("attributeGroup")) {
+			}else if (el.getLocalName().equals("enumeration")) {
+                XmlSchemaEnumerationFacet enumerationFacet = (XmlSchemaEnumerationFacet)
+                        XmlSchemaEnumerationFacet.construct(el);
+                if(XDOMUtil.anyElementsWithNameNS(el, XmlSchema.SCHEMA_NS, "annotation")) {
+                    XmlSchemaAnnotation facetAnnotation = handleAnnotation(el);
+                    enumerationFacet.setAnnotation(facetAnnotation);
+                }
+                restriction.facets.add(enumerationFacet);
+            }
+            else if (el.getLocalName().equals("attributeGroup")) {
 				XmlSchemaAttributeGroupRef attrGroup = handleAttributeGroupRef(el);
 				restriction.attributes.add(attrGroup);
 			} else if (el.getLocalName().equals("simpleType")) {
