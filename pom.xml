@@ -23,7 +23,7 @@
   <artifactId>XmlSchema</artifactId>
   <packaging>bundle</packaging>
   <name>XmlSchema</name>
-  <version>1.4.7-wso2v2</version>
+  <version>1.4.7-wso2v3-SNAPSHOT</version>
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
