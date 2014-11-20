@@ -27,6 +27,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.ws.commons.schema.wso2</groupId>
     <artifactId>XmlSchema</artifactId>
     <packaging>bundle</packaging>
     <name>xmlschema.wso2</name>
