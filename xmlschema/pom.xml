@@ -18,17 +18,19 @@
   under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>org.apache.ws.commons.schema</groupId>
+    <artifactId>xmlschema-parent</artifactId>
+    <version>1.4.7-wso2v3-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.apache.ws.commons.schema</groupId>
   <artifactId>XmlSchema</artifactId>
   <packaging>bundle</packaging>
   <name>XmlSchema</name>
-  <version>1.4.7.wso2v3-SNAPSHOT</version>
-  <parent>
-    <groupId>org.apache</groupId>
-    <artifactId>apache</artifactId>
-    <version>6</version>
-  </parent>
+  <version>1.4.7-wso2v3-SNAPSHOT</version>
   <description>Commons XMLSchema is a light weight schema object model that can be used to manipulate or
         generate a schema. It has a clean, easy to use API and can easily be integrated into an existing project
         since it has almost no dependencies on third party libraries.</description>
@@ -54,12 +56,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <scm>
-    <url>https://github.com/wso2/wso2-xmlschema.git</url>
-    <developerConnection>scm:git:https://github.com/wso2/wso2-xmlschema.git</developerConnection>
-    <connection>scm:git:https://github.com/wso2/wso2-xmlschema.git</connection>
-    <tag>HEAD</tag>
-  </scm>
   <organization>
     <name>The Apache Software Foundation</name>
     <url>http://www.apache.org/</url>
