@@ -79,7 +79,7 @@
     </build>
 
     <properties>
-        <exp.pkg.version.xmlschema>1.4.7-wso2v3-SNAPSHOT</exp.pkg.version.xmlschema>
+        <exp.pkg.version.xmlschema>1.4.7-wso2v3</exp.pkg.version.xmlschema>
     </properties>
 
 </project>
