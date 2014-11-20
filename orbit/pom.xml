@@ -15,14 +15,12 @@
  ~ specific language governing permissions and limitations
  ~ under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>org.apache.ws.commons.schema</groupId>
         <artifactId>xmlschema-parent</artifactId>
-        <version>1.4.7-wso2v3-SNAPSHOT</version>
+        <version>1.4.7-wso2v3</version>
 	<relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -31,7 +29,7 @@
     <artifactId>XmlSchema</artifactId>
     <packaging>bundle</packaging>
     <name>xmlschema.wso2</name>
-    <version>1.4.7.wso2v3-SNAPSHOT</version>
+    <version>1.4.7.wso2v3</version>
     <description>
         org.wso2.carbon.xmlschema. This bundle contains the resources needed for
         xmlschema commons project
@@ -42,7 +40,7 @@
         <dependency>
             <groupId>org.apache.ws.commons.schema</groupId>
             <artifactId>XmlSchema</artifactId>
-            <version>1.4.7-wso2v3-SNAPSHOT</version>
+            <version>1.4.7-wso2v3</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
