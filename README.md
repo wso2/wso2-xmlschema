@@ -1,5 +1,5 @@
 # wso2-xmlschema
-Latest Released Version wso2-xmlschema-1.4.7-wso2v3
+Latest Released Version v1.4.7-wso2v3
 
 #####XMLSchema is a lightweight schema object model that can be used to manipulate and generate XML schema representations. It has very few external dependencies and can be easily integrated into an existing project. You are welcome to kick the tires and get XMLSchema on the move. If you like to help us shape XMLSchema any contribution in the form of coding, testing, submitting improvements to the documentation, and reporting bugs are always welcome.
 #####Thanks for your interest in XMLSchema!
