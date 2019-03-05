@@ -20,7 +20,7 @@
     <groupId>org.apache.ws.commons.schema</groupId>
     <artifactId>xmlschema-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.7.wso2v6</version>
+    <version>1.4.7-wso2v7-SNAPSHOT</version>
     <description>
         WSO2 XmlSchema Parent.
     </description>
@@ -29,7 +29,7 @@
         <url>https://github.com/wso2/wso2-xmlschema.git</url>
         <developerConnection>scm:git:https://github.com/wso2/wso2-xmlschema.git</developerConnection>
         <connection>scm:git:https://github.com/wso2/wso2-xmlschema.git</connection>
-        <tag>v1.4.7.wso2v6</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <repositories>
