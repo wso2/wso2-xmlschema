@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.ws.commons.schema</groupId>
     <artifactId>xmlschema-parent</artifactId>
-    <version>1.4.7-wso2v5</version>
+    <version>1.4.7-wso2v6-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -30,7 +30,7 @@
   <artifactId>XmlSchema</artifactId>
   <packaging>bundle</packaging>
   <name>XmlSchema</name>
-  <version>1.4.7-wso2v5</version>
+  <version>1.4.7-wso2v6-SNAPSHOT</version>
   <description>Commons XMLSchema is a light weight schema object model that can be used to manipulate or
         generate a schema. It has a clean, easy to use API and can easily be integrated into an existing project
         since it has almost no dependencies on third party libraries.</description>
