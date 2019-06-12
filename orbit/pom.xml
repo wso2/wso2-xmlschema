@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.apache.ws.commons.schema</groupId>
         <artifactId>xmlschema-parent</artifactId>
-        <version>1.4.7-wso2v7</version>
+        <version>1.4.7-wso2v8-SNAPSHOT</version>
 	<relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -29,7 +29,7 @@
     <artifactId>XmlSchema</artifactId>
     <packaging>bundle</packaging>
     <name>xmlschema.wso2</name>
-    <version>1.4.7-wso2v7</version>
+    <version>1.4.7-wso2v8-SNAPSHOT</version>
     <description>
         org.wso2.carbon.xmlschema. This bundle contains the resources needed for
         xmlschema commons project
@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.apache.ws.commons.schema</groupId>
             <artifactId>XmlSchema</artifactId>
-            <version>1.4.7-wso2v7</version>
+            <version>1.4.7-wso2v8-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
