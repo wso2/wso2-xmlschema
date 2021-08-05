@@ -21,7 +21,6 @@ package org.apache.ws.commons.schema.utils;
 
 import org.w3c.dom.*;
 
-import java.lang.reflect.Method;
 
 /**
  * Some useful utility methods.
@@ -36,7 +35,6 @@ import java.lang.reflect.Method;
  */
 public class DOMUtil {
 
-    private static final String DEFAULT_ENCODING = "UTF-8";
 
 	//
     // Constructors
@@ -589,36 +587,5 @@ public class DOMUtil {
         return node.getNamespaceURI();
     }
 
-    /**
-     * Get the input encoding of the document. This uses a DOM 3 API
-     * call getInputEncoding hence it returns the correct value
-     * only if a DOM3 API is used. Otherwise it returns the default encoding
-     * @param doc
-     * @return the encoding (e.g. UTF-8)
-     */
-    public static String getInputEncoding(Document doc) {
-        try {
-            Method m = doc.getClass().getMethod("getInputEncoding", new Class[]{});
-            return (String) m.invoke(doc, new Object[]{});
-        } catch (Throwable e) {
-            return DEFAULT_ENCODING;
-        }
-    }
-    
-    /**
-     * Get the xml encoding of the document. This uses a DOM 3 API
-     * call getXmlEncoding hence it returns the correct value
-     * only if a DOM3 API is used. Otherwise it returns the default encoding
-     * @see #getInputEncoding(Document)
-     * @param doc
-     * @return the encoding (e.g. utf-8).
-     */
-    public static String getXmlEncoding(Document doc) {
-        try {
-        	 Method m = doc.getClass().getMethod("getXmlEncoding", new Class[]{});
-             return (String) m.invoke(doc, new Object[]{});
-        } catch (Throwable e) {
-            return DEFAULT_ENCODING;
-        }
-    }
+
 } 
